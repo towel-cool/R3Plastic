@@ -17,12 +17,34 @@ connection.once('open', () => {
     console.log('database connection successful');
 })
 
+//Cohere API key is from Peter's Account
+const cohere = require("cohere-ai");
+cohere.init("1eOymMhMvr6mAKmB5utDW0AWQM5jpbF0SAofeGBa");
+
 app.get('/getTest', (req, res) => {
     res.send('test from backend');
 });
 
 const userRouter = require('./routes/users');
 app.use('/users', userRouter);
+
+//Cohere Code
+app.use(express.json());
+app.post('/botCall', (req, res) => {
+
+    const inputPrompt = req.body.inputPrompt;
+    //console.log('Received input prompt:', inputPrompt);
+    
+    (async () => {
+        const response = await cohere.generate({
+            prompt: inputPrompt,
+        });
+
+        //console.log(response.body.generations);
+        res.send(response.body.generations);
+
+    })();
+});
 
 app.listen(3001, () => {
     console.log('server running on port 3001');

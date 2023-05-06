@@ -17,6 +17,9 @@ export default function Navbar() {
             <Link to='/contact'>
                 <button>Contact</button>
             </Link>
+            <Link to='/coherebot'>
+                <button>Cohere Bot</button>
+            </Link>
         </div>
     );
 }
