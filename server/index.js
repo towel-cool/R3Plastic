@@ -33,14 +33,14 @@ app.use(express.json());
 app.post('/botCall', (req, res) => {
 
     const inputPrompt = req.body.inputPrompt;
-    console.log('Received input prompt:', inputPrompt);
+    //console.log('Received input prompt:', inputPrompt);
     
     (async () => {
         const response = await cohere.generate({
             prompt: inputPrompt,
         });
 
-        console.log(response.body);
+        //console.log(response.body.generations);
         res.send(response.body.generations);
 
     })();
