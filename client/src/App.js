@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import Footer from './components/footer.jsx';
 import Home from './pages/homePage';
 import Navbar from './components/navbar';
+import Footer from './components/footer.jsx';
 
 export default function App() {
   return (
