@@ -23,7 +23,7 @@ export default function RegisterBox() {
             return
         }
 
-        axios.post('http://localhost:3001/users/add', {
+        axios.post('https://r3backend.onrender.com/users/add', {
             email: usrEmail,
             password: usrPassword,
             firstname: usrFirstName,
