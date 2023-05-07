@@ -44,7 +44,7 @@ export default function RegisterBox() {
 
     if (!success && !failure)
         return(
-        <div>
+        <div className="flex flex-col justify-center align-middle h-screen">
             <h1 className="text-center text-3xl">Register</h1>
             <form className="flex flex-col items-center" onSubmit={handleSubmit}>
                 <div className='flex flex-col justify-center text-center'>
