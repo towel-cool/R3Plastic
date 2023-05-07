@@ -21,6 +21,9 @@ export default function Navbar() {
             <Link to='/coherebot'>
                 <button>Cohere Bot</button>
             </Link>
+            <Link to="/register">
+                <button>Register</button>
+            </Link>
         </div>
     );
 }
