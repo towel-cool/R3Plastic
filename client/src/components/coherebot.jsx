@@ -7,7 +7,7 @@ export default function CohereBot() {
     const [responseMsg, setResponseMsg] = useState("");
 
     function handleClick() {
-        axios.post('http://localhost:3001/botCall', {
+        axios.post('https://r3backend.onrender.com/botCall', {
             inputPrompt: input
           })
           .then(function (response) {
