@@ -12,7 +12,7 @@ export default function CohereBot() {
           })
           .then(function (response) {
             console.log(response.data[0].text);
-            setResponseMsg(response.data[0].text)
+            setResponseMsg(response.data[0].text);
           })
           .catch(function (error) {
             console.log(error);

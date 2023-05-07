@@ -5,7 +5,7 @@ export default function Navbar() {
     return(
         <div className=
         "flex flex-row justify-center space-x-7">
-            <h1>EcoHaul</h1>
+            <h1>R3Plastic</h1>
             <Link to='/'>
                 <button>Home</button>
             </Link>
