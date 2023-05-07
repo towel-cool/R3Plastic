@@ -2,7 +2,14 @@ import React from 'react';
 
 export default function Faq() {
     return(
-        <div>
+        <div className='h-screen '>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            
+
             <h1 className="text-3xl text-center">FAQ</h1>
             <ul className="text-center">
                 <li>Q: How does the recycling and repurposing process work?</li>
