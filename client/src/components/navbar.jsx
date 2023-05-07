@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return(
-        <div>
+        <div className=
+        "flex flex-row justify-center space-x-7">
             <h1>EcoHaul</h1>
             <Link to='/'>
                 <button>Home</button>

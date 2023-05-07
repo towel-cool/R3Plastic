@@ -21,10 +21,6 @@ connection.once('open', () => {
 const cohere = require("cohere-ai");
 cohere.init("1eOymMhMvr6mAKmB5utDW0AWQM5jpbF0SAofeGBa");
 
-app.get('/getTest', (req, res) => {
-    res.send('test from backend');
-});
-
 const userRouter = require('./routes/users');
 app.use('/users', userRouter);
 
@@ -38,6 +34,7 @@ app.post('/botCall', (req, res) => {
     (async () => {
         const response = await cohere.generate({
             prompt: inputPrompt,
+            temperature: 0,
         });
 
         //console.log(response.body.generations);

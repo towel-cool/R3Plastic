@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 export default function HomeContent() {
-    const [apiTest, setApiTest] = useState("empty");
-
-    useEffect(() => {
-        axios.get('http://localhost:3001/getTest').then((response) => {
-            setApiTest(response.data);
-        });
-    },[])
-
     return(
-        <>
+        <div className=
+        "flex justify-center">
             <h1>Hello this is test</h1>
-            <h1>{apiTest}</h1>
-        </>
+        </div>
     );
 }

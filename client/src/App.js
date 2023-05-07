@@ -7,7 +7,8 @@ import CohereBot from './components/coherebot';
 
 export default function App() {
   return (
-      <>
+      <div className=
+      "bg-black">
         <Navbar />
         <Routes>
             <Route path='/' element={<Home />} />
@@ -16,6 +17,6 @@ export default function App() {
         </Routes>
         <Footer />
         
-      </>
+      </div>
   );
 }
