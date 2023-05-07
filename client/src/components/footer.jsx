@@ -5,7 +5,8 @@ import { FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
     return (
-        <div>
+        <div className=
+        "flex flex-row justify-center space-x-7">
             <Link to='/'>Home</Link>
             <Link to='/contact'>Contact Us</Link>
             <Link to='/faq'>FAQ</Link>
