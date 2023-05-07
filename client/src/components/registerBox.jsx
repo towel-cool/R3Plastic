@@ -12,8 +12,17 @@ export default function RegisterBox() {
     const [success, setSuccess] = useState("");
     const [failure, setFailure] = useState("");
 
+    let validProvinces = ["Ontario", "Quebec"]
+
     const handleSubmit = (e) => {
         e.preventDefault();;
+
+        if (!validProvinces.includes(usrProvince))
+        {
+            setFailure("Your province is not currently eligible for our service");
+            return
+        }
+
         axios.post('http://localhost:3001/users/add', {
             email: usrEmail,
             password: usrPassword,
@@ -49,7 +58,22 @@ export default function RegisterBox() {
                 <label>ADDRESS</label>
                 <div>
                     <label>PROVINCE</label>
-                        <input className="text-black" value={usrProvince} type="text" required onChange={(e) => setProvinceName(e.target.value)} />
+                        <select className="bg-white text-black" value={usrProvince} required onChange={(e) => setProvinceName(e.target.value)}>
+                            <option value="">Select a province</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="New Brunswick">New Brunswick</option>
+                            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="Northwest Territories">Northwest Territories</option>
+                            <option value="Nova Scotia">Nova Scotia</option>
+                            <option value="Nunavut">Nunavut</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Prince Edward Island">Prince Edward Island</option>
+                            <option value="Quebec">Quebec</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Yukon">Yukon</option>
+                        </select>
                     <label>CITY</label>
                         <input className="text-black" value={usrCity} type="text" required onChange={(e) => setCityName(e.target.value)} />
                     <label>ADDRESS LINE 1</label>
@@ -68,7 +92,7 @@ export default function RegisterBox() {
     else if (failure)
         return(
             <div>
-                <h1>There was a problem when registering...</h1>
+                <h1>It seems there was a problem when registering...</h1>
                 <h1>{failure}</h1>
             </div>
         );
