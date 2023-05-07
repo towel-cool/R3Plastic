@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install-server": "cd backend && npm install",
+    "start-server": "cd backend && node .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
