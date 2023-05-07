@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer.jsx';
 import AboutUs from './components/aboutUs';
 import CohereBot from './components/coherebot';
+import Register from './pages/register';
 
 export default function App() {
   return (
@@ -14,9 +15,9 @@ export default function App() {
             <Route path='/' element={<Home />} />
             <Route path='/aboutus' element={<AboutUs />} />
             <Route path='/coherebot' element={<CohereBot />} />
+            <Route path='/register' element={<Register />} />
         </Routes>
         <Footer />
-        
       </div>
   );
 }

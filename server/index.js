@@ -34,7 +34,10 @@ app.post('/botCall', (req, res) => {
     (async () => {
         const response = await cohere.generate({
             prompt: inputPrompt,
-            temperature: 0,
+            temperature: 0.5,
+            max_tokens: 100,
+            model: "command-nightly",
+            stop_sequences: ["."],
         });
 
         //console.log(response.body.generations);
