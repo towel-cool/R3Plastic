@@ -87,14 +87,14 @@ export default function RegisterBox() {
     );
     else if (success)
         return(
-            <div className='text-center text-black'>
-                <h1>You are now registered!</h1>
+            <div className='flex flex-col justify-center align-middle text-center text-black h-screen'>
+                <h1 className="text-3xl text-center">You are now registered!</h1>
             </div>
         );
     else if (failure)
         return(
-            <div className='text-center text-black'>
-                <h1>It seems there was a problem when registering...</h1>
+            <div className='flex flex-col justify-center align-middle text-center text-black h-screen'>
+                <h1 className='text-3xl text-center'>It seems there was a problem when registering...</h1>
                 <h1>{failure}</h1>
             </div>
         );
