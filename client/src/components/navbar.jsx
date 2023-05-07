@@ -9,24 +9,22 @@ export default function Navbar() {
                <Link to="/">
                      <img src="./r3plastic.png" alt="Company Logo" className="fixed -left-5 -top-5 h-40 w-70  cursor-pointer" />
                 </Link>
-                <Link to='/aboutus'>
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">About Us</button>
-                </Link>
-                <Link to='/faq'>
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">FAQ</button>
-                </Link>
-                <Link to='/contact'>
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Contact Us</button>
+                <Link to="/register">
+                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Register</button>
                 </Link>
                 <Link to='/coherebot'>
                     <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Cohere Bot</button>
                 </Link>
-                <Link to="/register">
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Register</button>
+                <Link to='/faq'>
+                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">FAQ</button>
                 </Link>
-            
-           
-        </div>
+                <Link to='/aboutus'>
+                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">About Us</button>
+                </Link>
+                <Link to='/contact'>
+                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Contact Us</button>
+                </Link>
+            </div>
         </div>
     );
 }
