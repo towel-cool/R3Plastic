@@ -10,7 +10,7 @@ import FaqPage from './pages/faqPage';
 export default function App() {
   return (
       <div className=
-      "bg-black">
+      "bg-green-700">
         <Navbar />
         <Routes>
             <Route path='/' element={<Home />} />
