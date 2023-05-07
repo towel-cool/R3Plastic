@@ -21,9 +21,6 @@ export default function Navbar() {
                 <Link to='/aboutus'>
                     <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">About Us</button>
                 </Link>
-                <Link to='/contact'>
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Contact Us</button>
-                </Link>
             </div>
         </div>
     );
